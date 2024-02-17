@@ -32,7 +32,7 @@ namespace DialogueEditor
         // User-Facing options
         // Drawn by custom inspector
         public bool ScrollText;
-        public float ScrollSpeed = 1;
+        public float ScrollSpeed = 2;
         public Sprite BackgroundImage;
         public bool BackgroundImageSliced;
         public Sprite OptionImage;
