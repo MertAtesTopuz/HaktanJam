@@ -12,6 +12,7 @@ public class NPC : MonoBehaviour
     public float Distace;
     public float range = 5;
     public Transform target;
+    public SpriteRenderer spriteRenderer;
 
     public GameObject UI;
 
@@ -22,10 +23,14 @@ public class NPC : MonoBehaviour
         if (Distace < range)
         {
             UI.SetActive(true);
+            //spriteRenderer.color = Color.cyan;
+            spriteRenderer.color = Color.red;
+
         }
         else
         {
             UI.SetActive(false);
+            spriteRenderer.color = Color.blue;
         }
 
         if (Input.GetKeyDown(KeyCode.F))

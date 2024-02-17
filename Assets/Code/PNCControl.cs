@@ -10,9 +10,10 @@ public class PNCControl : MonoBehaviour
     //[SerializeField] private float scaleRatio;
     private Animator anim;
     private Vector2 stuckDistanceCheck;
-    public Rigidbody2D rb;
+    //public Rigidbody2D rb;
     private Vector3 previousPosition;
     bool isRight;
+    public CameraFollow2D cameraFollow;
 
     void Start()
     {
@@ -45,6 +46,7 @@ public class PNCControl : MonoBehaviour
         if (transform.position.x == followSpot.x)
         {
             anim.SetBool("walk", false);
+            print("walkF");
         }
         else
         {
@@ -83,5 +85,7 @@ public class PNCControl : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+        cameraFollow.offset.x *= -1;
+        cameraFollow.smoothSpeed = 0.01f;
     }
 }
