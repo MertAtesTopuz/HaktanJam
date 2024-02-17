@@ -13,6 +13,8 @@ public class PNCControl : MonoBehaviour
     //public Rigidbody2D rb;
     private Vector3 previousPosition;
     bool isRight;
+    public AudioClip AudioClip;
+    public AudioSource AudioSource;
     public CameraFollow2D cameraFollow;
 
     void Start()
@@ -86,6 +88,11 @@ public class PNCControl : MonoBehaviour
         scale.x *= -1;
         transform.localScale = scale;
         cameraFollow.offset.x *= -1;
-        cameraFollow.smoothSpeed = 0.01f;
+    }
+
+    public void sound() 
+    {
+        AudioSource.PlayOneShot(AudioClip);
+
     }
 }
