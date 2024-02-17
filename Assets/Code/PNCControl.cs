@@ -8,13 +8,17 @@ public class PNCControl : MonoBehaviour
     [SerializeField] private float speed;
     //[SerializeField] private float perspectiveScale;
     //[SerializeField] private float scaleRatio;
-    //private Animator anim;
+    private Animator anim;
     private Vector2 stuckDistanceCheck;
+    public Rigidbody2D rb;
+    private Vector3 previousPosition;
+    bool isRight;
 
     void Start()
     {
         followSpot = transform.position;
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
+        previousPosition = transform.position;
     }
 
     void Update()
@@ -25,6 +29,27 @@ public class PNCControl : MonoBehaviour
             followSpot = new Vector2(mousePos.x, transform.position.y);
         }
         transform.position = Vector2.MoveTowards(transform.position, followSpot, speed * Time.deltaTime);
+
+
+        if (transform.position.x > followSpot.x && !isRight)
+        {
+            Flip();
+        }
+        else if (transform.position.x < followSpot.x && isRight)
+        {
+            Flip();
+        }
+
+
+
+        if (transform.position.x == followSpot.x)
+        {
+            anim.SetBool("walk", false);
+        }
+        else
+        {
+            anim.SetBool("walk", true);
+        }
         //UpdateAnimation();
     }
 
@@ -49,5 +74,14 @@ public class PNCControl : MonoBehaviour
             //anim.SetFloat("angle", angle);
             stuckDistanceCheck = transform.position;
         }
+    }
+
+
+    void Flip()
+    {
+        isRight = !isRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }
