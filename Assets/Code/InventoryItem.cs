@@ -52,6 +52,21 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         transform.SetParent(transform.root);
         col.enabled = true;
         transform.SetAsLastSibling();
+
+        if (image.sprite.name == "e7m7DP_3")
+        {
+            InventoryManager.instance.piece1Control = true;
+        }
+
+        if (image.sprite.name == "e7m7DP_7")
+        {
+            InventoryManager.instance.piece2Control = true;
+        }
+
+        if (image.sprite.name == "e7m7DP_2")
+        {
+            InventoryManager.instance.piece3Control = true;
+        }
     }
     
     public void OnDrag(PointerEventData eventData)
@@ -64,6 +79,38 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
         col.enabled = false;
-        InventoryManager.instance.GetSelectedItem(true); //burayı objeye göre bool ile kontrol et
+
+        if (image.sprite.name == "e7m7DP_3")
+        {
+            InventoryManager.instance.piece1Control = false;
+        }
+
+        if (image.sprite.name == "e7m7DP_7")
+        {
+            InventoryManager.instance.piece2Control = false;
+        }
+
+        if (image.sprite.name == "e7m7DP_2")
+        {
+            InventoryManager.instance.piece3Control = false;
+        }
+
+        if(InventoryManager.instance.piece1Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.piece1Del = false;
+        }
+
+        if(InventoryManager.instance.piece2Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.piece2Del = false;
+        }
+
+        if(InventoryManager.instance.piece3Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.piece3Del = false;
+        }
     }
 }

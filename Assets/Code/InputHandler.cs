@@ -48,14 +48,25 @@ public class InputHandler : MonoBehaviour
         }
 
         InventorySlot slot = rayHit.collider.GetComponent<InventorySlot>();
+        GameObject slotDebug = rayHit.collider.gameObject;
         
+        if(slotDebug != null)
+            print(slotDebug.name);
 
+        
         if (slot != null)
         {
             int selectedNum = System.Array.IndexOf(InventoryManager.instance.inventorySlots, slot);
             InventoryManager.instance.ChangeSelectedSlot(selectedNum);
 
+
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+            
+        }
+        else
+        {
+            return;
         }
     }
+
 }

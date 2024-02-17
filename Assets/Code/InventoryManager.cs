@@ -10,6 +10,14 @@ public class InventoryManager : MonoBehaviour
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
 
+    public bool piece1Control;
+    public bool piece2Control;
+    public bool piece3Control;
+    public bool piece1Del;
+    public bool piece2Del;
+    public bool piece3Del;
+
+
     int selectedSlot = -1;
 
     private void Awake()
@@ -31,6 +39,7 @@ public class InventoryManager : MonoBehaviour
 
         inventorySlots[newValue].Select();
         selectedSlot = newValue;
+        print(selectedSlot);
 
     }
 

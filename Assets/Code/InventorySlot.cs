@@ -15,6 +15,12 @@ public class InventorySlot : MonoBehaviour
         Deselect();
     }
 
+    void Update()
+    {
+        int selectedNum = System.Array.IndexOf(InventoryManager.instance.inventorySlots, this);
+        InventoryItem itemInSlot = GetComponentInChildren<InventoryItem>();
+    }
+
     public void Select()
     {
         image.sprite = selected;
