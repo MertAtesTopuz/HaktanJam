@@ -84,6 +84,30 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             InventoryManager.instance.stakeCheckT3= true;
         }
+
+        if (image.sprite.name == "Flower_0")
+        {
+            InventoryManager.instance.flower0Check = true;
+        }
+
+        if (image.sprite.name == "Flower_1")
+        {
+            InventoryManager.instance.flower1Check = true;
+        }
+
+        if (image.sprite.name == "Flower_2")
+        {
+            InventoryManager.instance.flower2Check = true;
+        }
+
+        if (image.sprite.name == "Flower_3")
+        {
+            InventoryManager.instance.flower3Check = true;
+        }
+        if (image.sprite.name == "Flower_4")
+        {
+            InventoryManager.instance.flower4Check = true;
+        }
     }
     
     public void OnDrag(PointerEventData eventData)
@@ -127,6 +151,30 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (image.sprite.name == "Stake")
         {
             InventoryManager.instance.stakeCheckT3 = false;
+        }
+
+        if (image.sprite.name == "Flower_0")
+        {
+            InventoryManager.instance.flower0Check = false;
+        }
+
+        if (image.sprite.name == "Flower_1")
+        {
+            InventoryManager.instance.flower1Check = false;
+        }
+
+        if (image.sprite.name == "Flower_2")
+        {
+            InventoryManager.instance.flower2Check = false;
+        }
+
+        if (image.sprite.name == "Flower_3")
+        {
+            InventoryManager.instance.flower3Check = false;
+        }
+        if (image.sprite.name == "Flower_4")
+        {
+            InventoryManager.instance.flower4Check = false;
         }
 
         if(InventoryManager.instance.trapT1Del == true)
@@ -175,6 +223,36 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             InventoryManager.instance.GetSelectedItem(true);
             InventoryManager.instance.stakeT3Del = false;
+        }
+
+        if(InventoryManager.instance.flower0Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.flower0Del = false;
+        }
+
+        if(InventoryManager.instance.flower1Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.flower1Del = false;
+        }
+
+        if(InventoryManager.instance.flower2Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.flower2Del = false;
+        }
+
+        if(InventoryManager.instance.flower3Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.flower3Del = false;
+        }
+
+        if(InventoryManager.instance.flower4Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.flower4Del = false;
         }
     }
 }

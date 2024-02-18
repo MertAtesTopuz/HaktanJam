@@ -29,6 +29,18 @@ public class InventoryManager : MonoBehaviour
     public bool holeT3Del;
     public bool stakeT3Del;
 
+    public bool flower0Check;
+    public bool flower1Check;
+    public bool flower2Check;
+    public bool flower3Check;
+    public bool flower4Check;
+    public bool flower0Del;
+    public bool flower1Del;
+    public bool flower2Del;
+    public bool flower3Del;
+    public bool flower4Del;
+
+
     int selectedSlot = -1;
 
     private void Awake()
