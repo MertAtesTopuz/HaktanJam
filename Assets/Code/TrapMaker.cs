@@ -4,40 +4,32 @@ using UnityEngine;
 
 public class TrapMaker : MonoBehaviour
 {
-    public GameObject piece1;
-    public GameObject piece2;
-    public GameObject piece3;
+    public GameObject leaf;
+    public GameObject trap;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject trapCol;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (leaf.activeSelf == true && trap.activeSelf == true)
+        {
+            trapCol.SetActive(true);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("UIitem"))
         {
-            if(InventoryManager.instance.piece1Control == true)
+            if(InventoryManager.instance.leafChekcT1 == true)
             {
-                piece1.SetActive(true);
-                InventoryManager.instance.piece1Del = true;
+                leaf.SetActive(true);
+                InventoryManager.instance.leafT1Del = true;
             }
-            if(InventoryManager.instance.piece2Control == true)
+            if(InventoryManager.instance.trapCheckT1 == true)
             {
-                piece2.SetActive(true);
-                InventoryManager.instance.piece2Del = true;
-            }
-            if(InventoryManager.instance.piece3Control == true)
-            {
-                piece3.SetActive(true);
-                InventoryManager.instance.piece3Del = true;
+                trap.SetActive(true);
+                InventoryManager.instance.trapT1Del = true;
             }
         }
     }

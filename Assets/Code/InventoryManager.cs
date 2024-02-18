@@ -10,13 +10,24 @@ public class InventoryManager : MonoBehaviour
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
 
-    public bool piece1Control;
-    public bool piece2Control;
-    public bool piece3Control;
-    public bool piece1Del;
-    public bool piece2Del;
-    public bool piece3Del;
+    public bool leafChekcT1;
+    public bool trapCheckT1;
+    public bool leafT1Del;
+    public bool trapT1Del;
 
+    public bool leafChekcT2;
+    public bool stoneCheckT2;
+    public bool ropeCheckT2;
+    public bool leafT2Del;
+    public bool stoneT2Del;
+    public bool ropeT2Del;
+
+    public bool leafChekcT3;
+    public bool holeCheckT3;
+    public bool stakeCheckT3;
+    public bool leafT3Del;
+    public bool holeT3Del;
+    public bool stakeT3Del;
 
     int selectedSlot = -1;
 

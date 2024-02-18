@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: e7m7DP_0
+      name: Knife
       rect:
         serializedVersion: 2
         x: 178
@@ -288,7 +288,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      e7m7DP_0: -1210400904
+      Knife: -1210400904
       e7m7DP_1: -1911071451
       e7m7DP_2: 840037498
       e7m7DP_3: -778208079

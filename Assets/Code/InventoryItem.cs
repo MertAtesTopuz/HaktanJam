@@ -53,19 +53,36 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         col.enabled = true;
         transform.SetAsLastSibling();
 
-        if (image.sprite.name == "e7m7DP_3")
+        if (image.sprite.name == "TrapOpen")
         {
-            InventoryManager.instance.piece1Control = true;
+            InventoryManager.instance.trapCheckT1 = true;
         }
 
-        if (image.sprite.name == "e7m7DP_7")
+        if (image.sprite.name == "Leaf")
         {
-            InventoryManager.instance.piece2Control = true;
+            InventoryManager.instance.leafChekcT1 = true;
+            InventoryManager.instance.leafChekcT2 = true;
+            InventoryManager.instance.leafChekcT3 = true;
         }
 
-        if (image.sprite.name == "e7m7DP_2")
+        if (image.sprite.name == "Rocks")
         {
-            InventoryManager.instance.piece3Control = true;
+            InventoryManager.instance.stoneCheckT2 = true;
+        }
+
+        if (image.sprite.name == "RopePick")
+        {
+            InventoryManager.instance.ropeCheckT2= true;
+        }
+
+        if (image.sprite.name == "Shovel")
+        {
+            InventoryManager.instance.holeCheckT3 = true;
+        }
+
+        if (image.sprite.name == "Stake")
+        {
+            InventoryManager.instance.stakeCheckT3= true;
         }
     }
     
@@ -80,37 +97,84 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         transform.SetParent(parentAfterDrag);
         col.enabled = false;
 
-        if (image.sprite.name == "e7m7DP_3")
+        if (image.sprite.name == "TrapOpen")
         {
-            InventoryManager.instance.piece1Control = false;
+            InventoryManager.instance.trapCheckT1 = false;
         }
 
-        if (image.sprite.name == "e7m7DP_7")
+        if (image.sprite.name == "Leaf")
         {
-            InventoryManager.instance.piece2Control = false;
+            InventoryManager.instance.leafChekcT1 = false;
+            InventoryManager.instance.leafChekcT2 = false;
+            InventoryManager.instance.leafChekcT3 = false;
         }
 
-        if (image.sprite.name == "e7m7DP_2")
+        if (image.sprite.name == "Rocks")
         {
-            InventoryManager.instance.piece3Control = false;
+            InventoryManager.instance.stoneCheckT2 = false;
         }
 
-        if(InventoryManager.instance.piece1Del == true)
+        if (image.sprite.name == "RopePick")
+        {
+            InventoryManager.instance.ropeCheckT2 = false;
+        }
+
+        if (image.sprite.name == "Shovel")
+        {
+            InventoryManager.instance.holeCheckT3 = false;
+        }
+
+        if (image.sprite.name == "Stake")
+        {
+            InventoryManager.instance.stakeCheckT3 = false;
+        }
+
+        if(InventoryManager.instance.trapT1Del == true)
         {
             InventoryManager.instance.GetSelectedItem(true);
-            InventoryManager.instance.piece1Del = false;
+            InventoryManager.instance.trapT1Del = false;
         }
 
-        if(InventoryManager.instance.piece2Del == true)
+        if(InventoryManager.instance.leafT1Del == true)
         {
             InventoryManager.instance.GetSelectedItem(true);
-            InventoryManager.instance.piece2Del = false;
+            InventoryManager.instance.leafT1Del = false;
         }
 
-        if(InventoryManager.instance.piece3Del == true)
+        if(InventoryManager.instance.stoneT2Del == true)
         {
             InventoryManager.instance.GetSelectedItem(true);
-            InventoryManager.instance.piece3Del = false;
+            InventoryManager.instance.stoneT2Del = false;
+        }
+
+        if(InventoryManager.instance.leafT2Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.leafT2Del = false;
+        }
+
+        if(InventoryManager.instance.ropeT2Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.ropeT2Del = false;
+        }
+
+        if(InventoryManager.instance.leafT3Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.leafT3Del = false;
+        }
+
+        if(InventoryManager.instance.holeT3Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.holeT3Del = false;
+        }
+
+        if(InventoryManager.instance.stakeT3Del == true)
+        {
+            InventoryManager.instance.GetSelectedItem(true);
+            InventoryManager.instance.stakeT3Del = false;
         }
     }
 }
