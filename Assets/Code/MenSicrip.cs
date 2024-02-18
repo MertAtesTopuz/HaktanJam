@@ -8,7 +8,10 @@ using TMPro;
 public class MenSicrip : MonoBehaviour
 {
     public Button button;
+    public Image imgCat;
     public GameObject quitTxt;
+    public Sprite presedSpi;
+    public Sprite mainSpi;
 
     private AudioSource audioSrc;
     private bool audioControl = true;
@@ -45,10 +48,12 @@ public class MenSicrip : MonoBehaviour
 
     IEnumerator CatAudio()
     {
+        imgCat.sprite = presedSpi;
         audioSrc.Play();
         audioControl = false;
         yield return new WaitForSeconds(2f);
         audioSrc.Stop();
         audioControl = true;
+        imgCat.sprite = mainSpi;
     }
 }
