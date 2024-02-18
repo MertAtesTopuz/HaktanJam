@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 44252686}
   - component: {fileID: 44252685}
   - component: {fileID: 44252684}
+  - component: {fileID: 44252687}
   m_Layer: 0
   m_Name: Flower_2
   m_TagString: Untagged
@@ -469,7 +470,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.7695312, y: 2.1601562}
-    newSize: {x: 4.62, y: 5.2}
+    newSize: {x: 1.7695312, y: 2.1601562}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -523,7 +524,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.62, y: 5.2}
+  m_Size: {x: 1.7695312, y: 2.1601562}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -544,6 +545,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &44252687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44252683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf99717afe53543af9b1c57b9b03d029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainPos: {fileID: 0}
+  item: {fileID: 11400000, guid: 3134b4fe57f634e94911a90d2556db5e, type: 2}
 --- !u!1 &168725694
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8802ebceb0d26444ab1e256710644065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  followSpot: {x: 0, y: 0}
   speed: 10
   AudioClip: {fileID: 0}
   AudioSource: {fileID: 0}
@@ -4153,6 +4169,7 @@ GameObject:
   - component: {fileID: 1347379646}
   - component: {fileID: 1347379645}
   - component: {fileID: 1347379644}
+  - component: {fileID: 1347379647}
   m_Layer: 0
   m_Name: Flower_1
   m_TagString: Untagged
@@ -4197,7 +4214,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.96875, y: 2.421875}
-    newSize: {x: 4.62, y: 5.2}
+    newSize: {x: 1.96875, y: 2.421875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4251,7 +4268,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.62, y: 5.2}
+  m_Size: {x: 1.96875, y: 2.421875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4272,6 +4289,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1347379647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347379643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf99717afe53543af9b1c57b9b03d029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainPos: {fileID: 0}
+  item: {fileID: 11400000, guid: 5a61b68602aa14cb8894f05142a48031, type: 2}
 --- !u!1 &1411382052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4850,6 +4881,7 @@ GameObject:
   - component: {fileID: 1524234892}
   - component: {fileID: 1524234891}
   - component: {fileID: 1524234890}
+  - component: {fileID: 1524234893}
   m_Layer: 0
   m_Name: Flower_3
   m_TagString: Untagged
@@ -4894,7 +4926,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.859375, y: 2.2890625}
-    newSize: {x: 4.62, y: 5.2}
+    newSize: {x: 1.859375, y: 2.2890625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4948,7 +4980,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.62, y: 5.2}
+  m_Size: {x: 1.859375, y: 2.2890625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4969,6 +5001,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1524234893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524234889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf99717afe53543af9b1c57b9b03d029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainPos: {fileID: 0}
+  item: {fileID: 11400000, guid: 7b00f23c485ed4bbf93276565433ba6a, type: 2}
 --- !u!1001 &1556280890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5665,6 +5711,151 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f657bcd41d2f244a0b920d8abf682bc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1814516838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1814516842}
+  - component: {fileID: 1814516841}
+  - component: {fileID: 1814516840}
+  - component: {fileID: 1814516839}
+  m_Layer: 0
+  m_Name: Flower_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1814516839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814516838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf99717afe53543af9b1c57b9b03d029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainPos: {fileID: 0}
+  item: {fileID: 11400000, guid: 2a60693cff3234a148ae036ddcc3c740, type: 2}
+--- !u!61 &1814516840
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814516838}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.65625, y: 2.1953125}
+    newSize: {x: 1.859375, y: 2.2890625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8046875, y: 2.03125}
+  m_EdgeRadius: 0
+--- !u!212 &1814516841
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814516838}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 2139094139, guid: 9cae7a5c7cc3a415184725f674770d6c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.859375, y: 2.2890625}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1814516842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814516838}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.73, y: 2.33, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1817062393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5833,6 +6024,7 @@ GameObject:
   - component: {fileID: 1946870841}
   - component: {fileID: 1946870840}
   - component: {fileID: 1946870839}
+  - component: {fileID: 1946870842}
   m_Layer: 0
   m_Name: Flower_0
   m_TagString: Untagged
@@ -5877,7 +6069,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.8046875, y: 2.03125}
-    newSize: {x: 4.62, y: 5.2}
+    newSize: {x: 1.8046875, y: 2.03125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -5931,7 +6123,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.62, y: 5.2}
+  m_Size: {x: 1.8046875, y: 2.03125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -5952,6 +6144,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1946870842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946870838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf99717afe53543af9b1c57b9b03d029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainPos: {fileID: 0}
+  item: {fileID: 11400000, guid: f23184bfd614e44a6b1c9a0044948b13, type: 2}
 --- !u!1 &2073439793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6577,3 +6783,4 @@ SceneRoots:
   - {fileID: 1347379646}
   - {fileID: 44252686}
   - {fileID: 1524234892}
+  - {fileID: 1814516842}
