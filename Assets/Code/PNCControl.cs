@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PNCControl : MonoBehaviour
 {
-    private Vector2 followSpot;
+    public Vector2 followSpot;
     [SerializeField] private float speed;
     //[SerializeField] private float perspectiveScale;
     //[SerializeField] private float scaleRatio;
